@@ -154,6 +154,7 @@ return {
       local capabilities = require('blink.cmp').get_lsp_capabilities()
 
       local servers = {
+        ts_ls = {},
         ty = {},
         ruff = {},
         docker_compose_language_service = {},
@@ -171,6 +172,7 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'typescript-language-server', -- Mason package for ts_ls
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
