@@ -1,5 +1,10 @@
 require('lazy').setup({
-  'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
+  {
+    'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
+    opts = {
+      filetype_exclude = { 'netrw', 'tutor', 'typescript', 'typescriptreact' },
+    },
+  },
 
   require 'kickstart.plugins.gitsigns',
 
