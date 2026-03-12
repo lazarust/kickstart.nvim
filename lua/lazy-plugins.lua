@@ -32,8 +32,6 @@ require('lazy').setup({
 
   require 'kickstart.plugins.lint',
 
-  require 'kickstart.plugins.debug',
-
   require 'kickstart.plugins.snacks',
 
   require 'kickstart.plugins.flash',
